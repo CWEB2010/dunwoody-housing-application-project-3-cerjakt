@@ -7,13 +7,14 @@
         Title="Dunwoody Housing Application"  WindowState="Maximized" WindowStyle="None" FontFamily="Tw Cen MT" FontSize="18">
 
     <DockPanel>
-        <Image Height="auto" Source="/Resources/sidebanner.png"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="262">
+        <Image Height="auto" Source="/Resources/sidebanner.png"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="66">
             <!--<Image.DataContext>
                 <Properties:Resources/>
             </Image.DataContext>-->
         </Image>
+        
         <StackPanel DockPanel.Dock="Right">
-            <Button Width="auto" Height="auto" HorizontalAlignment="Right" Margin="10,10,10,100" Background="White" Foreground="Black" Content="X" FontSize="44"  Click="exit_btn" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.504" />
+            <Button Width="auto" Height="auto" HorizontalAlignment="Right" Margin="10,10,10,100" Background="White" Foreground="Black" Content="X" FontSize="32"  Click="exit_btn" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.504" />
             <Label Height="auto" FontSize="62" HorizontalContentAlignment="Center">
                 <Label.Content>
                     <AccessText TextWrapping="Wrap" TextAlignment="Center" Text="Dunwoody Housing Application"/>

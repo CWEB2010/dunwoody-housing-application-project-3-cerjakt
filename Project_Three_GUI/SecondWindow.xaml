@@ -7,18 +7,19 @@
         mc:Ignorable="d"
         WindowState="Maximized" WindowStyle="None" FontFamily="Tw Cen MT" FontSize="18">
 
-    <DockPanel>
-
         <StackPanel>
-            <Button Width="auto" Height="auto" HorizontalAlignment="Right"  Background="White" Foreground="Black" Content="X" FontSize="32" Click="exit_btn" BorderBrush="{x:Null}"/>
-            <TabControl TabStripPlacement="Top" Height="108">
-                <TabItem x:Name="backgroundcolor" Header="Residents" Background="#FFAA1D2C" Foreground="White" BorderBrush="Black" Content="put your elements here"/>
-                <TabItem x:Name="tabIitemContent" Header="New Resident" Foreground="White" BorderBrush="Black" Background="#FFAA1D2C">
-                    <StackPanel/>
+
+        <!--Dunwoody Banner-->
+        <Image Height="auto" Source="/Resources/topbanner.png"></Image>
+            
+        <Button Width="auto" Height="auto" HorizontalAlignment="Right"  Background="White" Foreground="Black" Content="X" FontSize="32" Click="exit_btn" BorderBrush="{x:Null}"/>
+            <TabControl TabStripPlacement="Top">
+                <TabItem x:Name="backgroundcolor" Header="Residents" Background="#FFAA1D2C" Foreground="White" BorderBrush="Black" Content="put your elements here" Margin="0"/>
+                <TabItem x:Name="tabIitemContent" Header="New Resident" Foreground="White" BorderBrush="Black" Background="#FFAA1D2C" Margin="0">
+                
                 </TabItem>
             </TabControl>
 
         </StackPanel>
 
-    </DockPanel>
 </Window>

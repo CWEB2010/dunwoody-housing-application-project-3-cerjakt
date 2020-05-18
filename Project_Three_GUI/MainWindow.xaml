@@ -15,10 +15,10 @@
         <!--Exit Button - Originally made by Chris Fulton-->
         <Button HorizontalAlignment="Right" Background="White" Foreground="Black" Content="X" FontSize="32" Click="exit_btn" BorderBrush="{x:Null}"/>
 
-        <!--Title Display-->
+        <!--Title Display - Originally made by Chris Fulton-->
         <Label  FontSize="62" HorizontalContentAlignment="Center">
             <Label.Content>
-                <AccessText TextWrapping="Wrap" TextAlignment="Center" Text="Dunwoody Housing Application Login" />
+                <AccessText TextWrapping="Wrap" TextAlignment="Center" Text="Dunwoody Housing Application Login"/>
             </Label.Content>
         </Label>
 
@@ -43,10 +43,10 @@
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="150"/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Content="Username:" Margin="0,3,0,3"/>
-            <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Content="Password:" Margin="0,3,0,3"/>
-            <TextBox Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,2.5,0,2.5" />
-            <TextBox Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,2.5,0,2.5" />
+            <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Content="Username:" Margin="0,0,0,0"/>
+            <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Content="Password:" Margin="0,0,0,0"/>
+            <TextBox Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,5,0,5" x:Name="usernameBox"/>
+            <TextBox Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,5,0,5" x:Name="passwordBox" />
             <Button Grid.Column="3" Grid.Row="3" Foreground="White" BorderBrush="#FFAA1D2C" Click="sbmt_btn" Content="Submit" Background="#FFAA1D2C" Margin="50,0,0,0"/>
         </Grid>
 

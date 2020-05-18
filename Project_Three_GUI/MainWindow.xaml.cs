@@ -35,7 +35,7 @@ namespace Project_Three_GUI
 		//Username and password logic that allows entry if they are correct
 		private void sbmt_btn(object sender, RoutedEventArgs e)
 		{
-			if (usernameBox.Text == "home")
+			if (usernameBox.Text.ToUpper() == "HOME")
 			{
 				if (passwordBox.Text == "1234")
 				{

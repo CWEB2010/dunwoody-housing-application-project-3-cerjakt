@@ -8,24 +8,30 @@
         WindowState="Maximized" WindowStyle="None" FontFamily="Tw Cen MT" FontSize="18">
 
     <StackPanel>
-
         <!--Dunwoody Banner-->
-        <Image Height="auto" Source="/Resources/topbanner.png"> </Image>
-        
+        <Image Height="auto" Source="/Resources/topbanner.png"></Image>
+
         <!--Exit Button - Originally made by Chris Fulton-->
-        <Button HorizontalAlignment="Right" Background="White" Foreground="Black" Content="X" FontSize="32" Click="exit_btn" BorderBrush="{x:Null}"/>
+        <Button Width="auto" Height="auto" HorizontalAlignment="Right" Background="#FFAA1D2C" Foreground="White" Content="Exit" FontSize="32" Click="exit_btn" BorderBrush="Black" VerticalAlignment="Top"/>
 
         <!--Title Display - Originally made by Chris Fulton-->
-        <Label  FontSize="62" HorizontalContentAlignment="Center">
+        <Label HorizontalAlignment="Center">
             <Label.Content>
-                <AccessText TextWrapping="Wrap" TextAlignment="Center" Text="Dunwoody Housing Application Login"/>
+                <AccessText TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" Text="Dunwoody Housing Application" FontSize="144"/>
+            </Label.Content>
+        </Label>
+
+        <!--Login Display-->
+        <Label HorizontalContentAlignment="Center">
+            <Label.Content>
+                <AccessText TextWrapping="NoWrap" TextAlignment="Center" Text="Login" FontSize="72"/>
             </Label.Content>
         </Label>
 
         <!--Credentials Display-->
-        <Label FontSize="62" HorizontalContentAlignment="Center" Height="100">
+        <Label HorizontalContentAlignment="Center">
             <Label.Content>
-                <AccessText TextWrapping="Wrap" TextAlignment="Center" Text="Username: Home | Password: 1234" FontSize="20" />
+                <AccessText TextWrapping="NoWrap" TextAlignment="Center" Text="Username: Home | Password: 1234" FontSize="16"/>
             </Label.Content>
         </Label>
 
@@ -40,16 +46,15 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="120"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Content="Username:" Margin="0,0,0,0"/>
             <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Content="Password:" Margin="0,0,0,0"/>
-            <TextBox Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,5,0,5" x:Name="usernameBox"/>
-            <TextBox Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,5,0,5" x:Name="passwordBox" />
+            <TextBox Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,5,0,5" x:Name="usernameBox" BorderBrush="#FFAA1D2C"/>
+            <TextBox Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,5,0,5" x:Name="passwordBox" BorderBrush="#FFAA1D2C" />
             <Button Grid.Column="3" Grid.Row="3" Foreground="White" BorderBrush="#FFAA1D2C" Click="sbmt_btn" Content="Submit" Background="#FFAA1D2C" Margin="50,0,0,0"/>
         </Grid>
-
     </StackPanel>
 
 </Window>

@@ -1,0 +1,24 @@
+﻿<Window 
+        x:Class="Project_Three_GUI.SecondWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        WindowState="Maximized" WindowStyle="None" FontFamily="Tw Cen MT" FontSize="18">
+
+    <DockPanel>
+
+        <StackPanel>
+            <Button Width="auto" Height="auto" HorizontalAlignment="Right"  Background="White" Foreground="Black" Content="X" FontSize="32" Click="exit_btn" BorderBrush="{x:Null}"/>
+            <TabControl TabStripPlacement="Top" Height="108">
+                <TabItem x:Name="backgroundcolor" Header="Residents" Background="#FFAA1D2C" Foreground="White" BorderBrush="Black" Content="put your elements here"/>
+                <TabItem x:Name="tabIitemContent" Header="New Resident" Foreground="White" BorderBrush="Black" Background="#FFAA1D2C">
+                    <StackPanel/>
+                </TabItem>
+            </TabControl>
+
+        </StackPanel>
+
+    </DockPanel>
+</Window>

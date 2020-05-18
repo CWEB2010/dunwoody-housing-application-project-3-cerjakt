@@ -10,28 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Project_Three_GUI
 {
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
-			InitializeComponent();
-		}
-
-		private void exit_btn(object sender, RoutedEventArgs e)
-		{
-			this.Close();
-		}
-		private void sbmt_btn(object sender, RoutedEventArgs e)
+    /// <summary>
+    /// Interaction logic for SecondWindow.xaml
+    /// </summary>
+    public partial class SecondWindow : Window
+    {
+        public SecondWindow()
+        {
+            InitializeComponent();
+        }
+        private void exit_btn(object sender, RoutedEventArgs e)
 		{
 			this.Close();
 		}
-	}
+    }
 }

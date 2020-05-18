@@ -12,7 +12,7 @@
         <Image Height="auto" Source="/Resources/topbanner.png"></Image>
 
         <!--Exit Button - Originally made by Chris Fulton-->
-        <Button Width="auto" Height="auto" HorizontalAlignment="Right" Background="#FFAA1D2C" Foreground="White" Content="Exit" FontSize="32" Click="exit_btn" BorderBrush="Black" VerticalAlignment="Top"/>
+        <Button Width="auto" Height="auto" HorizontalAlignment="Right" Background="White" Foreground="Black" Content="X" FontSize="32" Click="exit_btn" BorderBrush="White" VerticalAlignment="Top"/>
 
         <!--Title Display - Originally made by Chris Fulton-->
         <Label HorizontalAlignment="Center">

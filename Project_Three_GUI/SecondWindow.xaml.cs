@@ -27,5 +27,14 @@ namespace Project_Three_GUI
 		{
 			this.Close();
 		}
+        private void sbmt_btn(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

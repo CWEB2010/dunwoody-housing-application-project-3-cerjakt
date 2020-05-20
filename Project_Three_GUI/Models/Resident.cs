@@ -13,5 +13,6 @@ namespace Project_Three_GUI.Models
 		public int room_number { get; set; }
 		public double rent_fee { get; set; }
 		public int floor { get; set; }
+		public double boarding_fee { get; set; }
 	}
 }

@@ -7,19 +7,46 @@
         mc:Ignorable="d"
         WindowState="Maximized" WindowStyle="None" FontFamily="Tw Cen MT" FontSize="18">
 
-        <StackPanel>
+    <StackPanel>
 
         <!--Dunwoody Banner-->
         <Image Height="auto" Source="/Resources/topbanner.png"></Image>
-            
-        <Button Width="auto" Height="auto" HorizontalAlignment="Right"  Background="White" Foreground="Black" Content="X" FontSize="32" Click="exit_btn" BorderBrush="{x:Null}"/>
-            <TabControl TabStripPlacement="Top">
-                <TabItem x:Name="backgroundcolor" Header="Residents" Background="#FFAA1D2C" Foreground="White" BorderBrush="Black" Content="put your elements here" Margin="0"/>
-                <TabItem x:Name="tabIitemContent" Header="New Resident" Foreground="White" BorderBrush="Black" Background="#FFAA1D2C" Margin="0">
-                
-                </TabItem>
-            </TabControl>
 
-        </StackPanel>
+        <Button Width="auto" Height="auto" HorizontalAlignment="Right"  Background="White" Foreground="Black" Content="X" FontSize="32" Click="exit_btn" BorderBrush="{x:Null}"/>
+        <TabControl Height="1000" TabStripPlacement="Top" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="Residents" Background="White" BorderBrush="#FFACACAC" Margin="0,0,-120,0">
+
+                <Grid HorizontalAlignment="Center">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <DataGrid Grid.Column="1" Grid.Row="2" Margin="150,100,150,-350" BorderBrush="White">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name"/>
+                            <DataGridTextColumn Header="ID"/>
+                            <DataGridTextColumn Header="Room Number"/>
+                            <DataGridTextColumn Header="Rent Fee"/>
+                            <DataGridTextColumn Header="Floor"/>
+                            <DataGridTextColumn Header="Boarding Fee"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="New Resident" BorderBrush="#FFACACAC" Background="White" Margin="120,0,-240,0"/>
+
+        </TabControl>
+
+    </StackPanel>
 
 </Window>

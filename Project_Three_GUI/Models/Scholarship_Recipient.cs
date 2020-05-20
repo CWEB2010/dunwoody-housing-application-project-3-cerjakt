@@ -8,8 +8,6 @@ namespace Project_Three_GUI.Models
 {
 	class Scholarship_Recipient : Resident
 	{
-		public double boarding_fee { get; set; }
-
 		public Scholarship_Recipient(string name, int id, int room_number, double rent_fee, int floor, double boarding_fee)
 		{
 			this.name = name;
@@ -23,7 +21,7 @@ namespace Project_Three_GUI.Models
 		//Define a toString method 
 		public override string ToString()
 		{
-			return String.Format($"Welcome, {name}, ID: {id}, Room Number: {room_number}, Rent Free: {rent_fee}, Floor Number: {floor}");
+			return String.Format($"Welcome, {name}, ID: {id}, Room Number: {room_number}, Rent Free: {rent_fee}, Floor Number: {floor}, Boarding Fee: {boarding_fee}");
 		}
 
 	}

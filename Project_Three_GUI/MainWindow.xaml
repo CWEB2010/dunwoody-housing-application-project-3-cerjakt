@@ -21,13 +21,6 @@
             </Label.Content>
         </Label>
 
-        <!--Login Display-->
-        <Label HorizontalContentAlignment="Center">
-            <Label.Content>
-                <AccessText TextWrapping="NoWrap" TextAlignment="Center" Text="Login" FontSize="72"/>
-            </Label.Content>
-        </Label>
-
         <!--Credentials Display-->
         <Label HorizontalContentAlignment="Center">
             <Label.Content>

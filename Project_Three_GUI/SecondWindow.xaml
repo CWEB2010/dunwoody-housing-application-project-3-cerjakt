@@ -7,17 +7,24 @@
         mc:Ignorable="d"
         WindowState="Maximized" WindowStyle="None" FontFamily="Tw Cen MT" FontSize="18">
 
+    <!--Using a stack panel to format the window-->
     <StackPanel>
 
         <!--Dunwoody Banner-->
         <Image Height="auto" Source="/Resources/topbanner.png"></Image>
 
+        <!--Exit Button-->
         <Button Width="auto" Height="auto" HorizontalAlignment="Right"  Background="White" Foreground="Black" Content="X" FontSize="32" Click="exit_btn" BorderBrush="{x:Null}"/>
+        
+        <!--Sizing the tabs section-->
         <TabControl Height="1000" TabStripPlacement="Top" SelectionChanged="TabControl_SelectionChanged">
+
+            <!--Sizing and styling the tab-->
             <TabItem Header="Residents" Background="White" BorderBrush="#FFACACAC" Margin="0,0,-120,0">
 
                 <Grid HorizontalAlignment="Center">
 
+                    <!--Defining rows and columns for the grid-->
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
@@ -29,7 +36,20 @@
                         <ColumnDefinition Width="auto"/>
                     </Grid.ColumnDefinitions>
 
+                    <!--Making a data grid-->
                     <DataGrid Grid.Column="1" Grid.Row="2" Margin="150,100,150,-350" BorderBrush="White">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Amount per Floor"/>
+                            <DataGridTextColumn Header="Student Workers"/>
+                            <DataGridTextColumn Header="Athletes"/>
+                            <DataGridTextColumn Header="Scholarship Recipients"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <!--Residents Data Grid-->
+                    <TextBox Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Height="25" Margin="150,25,0,-46" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="150" Foreground="#FFD1D1D1" BorderBrush="#FFAA1D2C"/>
+
+                    <DataGrid Grid.Column="0" Grid.Row="2" Margin="150,100,150,-350" BorderBrush="White">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Name"/>
                             <DataGridTextColumn Header="ID"/>
@@ -41,9 +61,77 @@
                     </DataGrid>
 
                 </Grid>
+
             </TabItem>
 
-            <TabItem Header="New Resident" BorderBrush="#FFACACAC" Background="White" Margin="120,0,-240,0"/>
+            <TabItem Header="New Resident" BorderBrush="#FFACACAC" Background="White" Margin="120,0,-240,0">
+
+                <Grid HorizontalAlignment="Center">
+
+                    <!--Defining rows and columns for the grid-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" MinWidth="97"/>
+                        <ColumnDefinition Width="auto" MinWidth="100"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Student Type Text-->
+                    <Label Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Student Type" FontSize="16" Width="165"/>
+                    </Label>
+
+                    <!--First Name Text-->
+                    <Label Grid.Row="0" Grid.Column="1" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="First Name" FontSize="16" Width="165"/>
+                    </Label>
+
+                    <!--Last Name Text-->
+                    <Label Grid.Row="0" Grid.Column="2" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Last Name" FontSize="16" Width="160"/>
+                    </Label>
+
+                    <!--Student Type Combo Box-->
+                    <ComboBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0"/>
+
+                    <!--First Name Text Box-->
+                    <TextBox Grid.Column="1" Grid.Row="1" Margin="10,5,10,25" x:Name="firstnameBox" BorderBrush="#FFAA1D2C"/>
+
+                    <!--Last Name Text Box-->
+                    <TextBox Grid.Column="2" Grid.Row="1" Margin="10,5,0,25" x:Name="lastnameBox" BorderBrush="#FFAA1D2C"/>
+
+                    <!--Floor Number Text-->
+                    <Label Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Floor Number" FontSize="16" Width="180"/>
+                    </Label>
+
+                    <!--Room Number Text-->
+                    <Label Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Room Number" FontSize="16" Width="180"/>
+                    </Label>
+
+                    <!--Monthly Hours Text-->
+                    <Label Grid.Row="2" Grid.Column="2" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Monthly Hours" FontSize="16" Width="164"/>
+                    </Label>
+
+                    <!--Floor Number Combo Box-->
+                    <ComboBox Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0"/>
+
+                    <!--Room Number Combo Box-->
+                    <ComboBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0"/>
+
+                    <!--Monthly Hours Text Box-->
+                    <TextBox Grid.Column="3" Grid.Row="3" Margin="10,5,0,5" x:Name="monthlyhoursBox" BorderBrush="#FFAA1D2C"/>
+
+                </Grid>
+
+            </TabItem>
 
         </TabControl>
 

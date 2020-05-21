@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         WindowState="Maximized" WindowStyle="None" FontFamily="Tw Cen MT" FontSize="18">
 
+    <!--Using a stack panel to format the window-->
     <StackPanel>
         <!--Dunwoody Banner-->
         <Image Height="auto" Source="/Resources/topbanner.png"></Image>
@@ -28,7 +29,7 @@
             </Label.Content>
         </Label>
 
-        <!--Login Entry-->
+        <!--Defining rows and colums for the grid to be used for the login entry-->
         <Grid HorizontalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
@@ -42,6 +43,8 @@
                 <ColumnDefinition Width="300"/>
                 <ColumnDefinition Width="120"/>
             </Grid.ColumnDefinitions>
+            
+            <!--Login Entry-->
             <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Content="Username:" Margin="0,0,0,0"/>
             <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Content="Password:" Margin="0,0,0,0"/>
             <TextBox Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,5,0,5" x:Name="usernameBox" BorderBrush="#FFAA1D2C"/>

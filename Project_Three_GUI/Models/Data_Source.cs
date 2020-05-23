@@ -35,7 +35,7 @@ namespace Project_Three_GUI.Models
 				{
 					//read in records and instantiate objects
 					data = read.ReadLine().Split(',');
-					//residentList.Add(new Resident(data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7]));
+					residentList.Add(new Athlete(data[0], data[1], Convert.ToInt32(data[2]), Convert.ToInt32(data[3]), Convert.ToDouble(data[4]), Convert.ToInt32(data[5]), Convert.ToDouble(data[6])));
 					Console.WriteLine(residentList[residentList.Count - 1]);
 				}
 

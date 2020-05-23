@@ -8,6 +8,7 @@ namespace Project_Three_GUI.Models
 {
 	abstract class Resident
 	{
+		public string type { get; set; }
 		public string name { get; set; }
 		public int id { get; set; }
 		public int room_number { get; set; }

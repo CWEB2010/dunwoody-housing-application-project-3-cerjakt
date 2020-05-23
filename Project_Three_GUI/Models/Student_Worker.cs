@@ -8,12 +8,13 @@ namespace Project_Three_GUI.Models
 {
 	class Student_Worker : Resident
 	{
-		public double pay { get; set; }
+		public double pay = 14;
 		public int hours_worked { get; set; }
 
-		public Student_Worker(string name, int id, int room_number, double rent_fee, int floor, double boarding_fee, double pay, int hours_worked)
+		public Student_Worker(string name, string type, int id, int room_number, double rent_fee, int floor, double boarding_fee, double pay, int hours_worked)
 		{
 			this.name = name;
+			this.type = type;
 			this.id = id;
 			this.room_number = room_number;
 			this.rent_fee = rent_fee;

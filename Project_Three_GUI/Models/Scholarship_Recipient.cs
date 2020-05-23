@@ -8,9 +8,10 @@ namespace Project_Three_GUI.Models
 {
 	class Scholarship_Recipient : Resident
 	{
-		public Scholarship_Recipient(string name, int id, int room_number, double rent_fee, int floor, double boarding_fee)
+		public Scholarship_Recipient(string name, string type, int id, int room_number, double rent_fee, int floor, double boarding_fee)
 		{
 			this.name = name;
+			this.type = type;
 			this.id = id;
 			this.room_number = room_number;
 			this.rent_fee = rent_fee;

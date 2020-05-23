@@ -99,10 +99,10 @@
                 </Label>
 
                 <!--Student Type Combo Box-->
-                <ComboBox Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0">
+                <ComboBox x:Name="student_type_combo_box" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0" SelectionChanged="student_type_changed">
                     <ComboBoxItem Content="Student Worker"></ComboBoxItem>
-                    <ComboBoxItem Content="Scholarship Recipient"></ComboBoxItem>
                     <ComboBoxItem Content="Athlete"></ComboBoxItem>
+                    <ComboBoxItem Content="Scholarship Recipient"></ComboBoxItem>
                 </ComboBox>
 
                 <!--First Name Text Box-->
@@ -127,10 +127,26 @@
                 </Label>
 
                 <!--Floor Number Combo Box-->
-                <ComboBox Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0"/>
+                <ComboBox x:Name="floor_number_combo_box" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0"/>
 
                 <!--Room Number Combo Box-->
-                <ComboBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0"/>
+                <ComboBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0">
+                        <ComboBoxItem Content="1"></ComboBoxItem>
+                        <ComboBoxItem Content="2"></ComboBoxItem>
+                        <ComboBoxItem Content="3"></ComboBoxItem>
+                        <ComboBoxItem Content="4"></ComboBoxItem>
+                        <ComboBoxItem Content="5"></ComboBoxItem>
+                        <ComboBoxItem Content="6"></ComboBoxItem>
+                        <ComboBoxItem Content="7"></ComboBoxItem>
+                        <ComboBoxItem Content="8"></ComboBoxItem>
+                        <ComboBoxItem Content="9"></ComboBoxItem>
+                        <ComboBoxItem Content="10"></ComboBoxItem>
+                        <ComboBoxItem Content="11"></ComboBoxItem>
+                        <ComboBoxItem Content="12"></ComboBoxItem>
+                        <ComboBoxItem Content="13"></ComboBoxItem>
+                        <ComboBoxItem Content="14"></ComboBoxItem>
+                        <ComboBoxItem Content="15"></ComboBoxItem>
+                    </ComboBox>
 
                 <!--Monthly Hours Text Box-->
                 <TextBox Grid.Column="3" Grid.Row="3" Margin="10,5,0,5" x:Name="monthlyhoursBox" BorderBrush="#FFAA1D2C"/>
@@ -144,7 +160,7 @@
                 <TextBox Grid.Column="0" Grid.Row="5" Margin="10,5,0,5" x:Name="studentidBox" BorderBrush="#FFAA1D2C"/>
 
                 <!--Submit Button-->
-                <Button Grid.Column="1" Grid.Row="5" Width="auto" Height="auto" HorizontalAlignment="Right"  Background="#FFAA1D2C" Foreground="White" Content="Submit" FontSize="16" Click="sbmt_btn" BorderBrush="{x:Null}"/>
+                <Button Grid.Column="2" Grid.Row="5" Width="110" Height="auto" HorizontalAlignment="Right"  Background="#FFAA1D2C" Foreground="White" Content="Add Resident" Click="add_resident_btn" BorderBrush="{x:Null}" Margin="0,0,0,0"/>
 
             </Grid>
 

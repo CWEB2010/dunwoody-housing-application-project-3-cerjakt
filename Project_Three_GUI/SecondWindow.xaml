@@ -49,14 +49,14 @@
                     <!--Residents Data Grid-->
                     <TextBox Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Height="25" Margin="150,25,0,-46" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="150" Foreground="#FFD1D1D1" BorderBrush="#FFAA1D2C"/>
 
-                    <DataGrid Grid.Column="0" Grid.Row="2" Margin="150,100,150,-350" BorderBrush="White">
+                    <DataGrid x:Name="resident_entry_grid" SelectionMode="Single" AutoGenerateColumns="False" Grid.Column="0" Grid.Row="2" Margin="150,100,150,-350" BorderBrush="White">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Name"/>
-                            <DataGridTextColumn Header="ID"/>
-                            <DataGridTextColumn Header="Room Number"/>
-                            <DataGridTextColumn Header="Rent Fee"/>
-                            <DataGridTextColumn Header="Floor"/>
-                            <DataGridTextColumn Header="Boarding Fee"/>
+                            <DataGridTextColumn Header="Name" Binding="{Binding name}"/>
+                            <DataGridTextColumn Header="Type" Binding="{Binding type}"/>
+                            <DataGridTextColumn Header="ID" Binding="{Binding id}"/>
+                            <DataGridTextColumn Header="Room Number" Binding="{Binding room_number}"/>
+                            <DataGridTextColumn Header="Rent Fee" Binding="{Binding rent_fee}"/>
+                            <DataGridTextColumn Header="Floor" Binding="{Binding floor}"/>
                         </DataGrid.Columns>
                     </DataGrid>
 
@@ -90,12 +90,7 @@
 
                 <!--First Name Text-->
                 <Label Grid.Row="0" Grid.Column="1" HorizontalContentAlignment="Center">
-                    <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="First Name" FontSize="16" Width="165"/>
-                </Label>
-
-                <!--Last Name Text-->
-                <Label Grid.Row="0" Grid.Column="2" HorizontalContentAlignment="Center">
-                    <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Last Name" FontSize="16" Width="160"/>
+                    <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Full Name" FontSize="16" Width="165"/>
                 </Label>
 
                 <!--Student Type Combo Box-->
@@ -106,10 +101,7 @@
                 </ComboBox>
 
                 <!--First Name Text Box-->
-                <TextBox Grid.Column="1" Grid.Row="1" Margin="10,5,10,25" x:Name="firstnameBox" BorderBrush="#FFAA1D2C"/>
-
-                <!--Last Name Text Box-->
-                <TextBox Grid.Column="2" Grid.Row="1" Margin="10,5,0,25" x:Name="lastnameBox" BorderBrush="#FFAA1D2C"/>
+                <TextBox Grid.Column="1" Grid.Row="1" Margin="10,5,10,25" x:Name="fullnameBox" BorderBrush="#FFAA1D2C"/>
 
                 <!--Floor Number Text-->
                 <Label Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Center">
@@ -130,7 +122,7 @@
                 <ComboBox x:Name="floor_number_combo_box" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0"/>
 
                 <!--Room Number Combo Box-->
-                <ComboBox Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0">
+                <ComboBox x:Name="room_number_combo_box" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0">
                         <ComboBoxItem Content="1"></ComboBoxItem>
                         <ComboBoxItem Content="2"></ComboBoxItem>
                         <ComboBoxItem Content="3"></ComboBoxItem>
@@ -152,15 +144,15 @@
                 <TextBox Grid.Column="3" Grid.Row="3" Margin="10,5,0,5" x:Name="monthlyhoursBox" BorderBrush="#FFAA1D2C"/>
 
                 <!--Student ID Text-->
-                <Label Grid.Row="4" Grid.Column="0" HorizontalContentAlignment="Center">
+                <Label Grid.Row="0" Grid.Column="2" HorizontalContentAlignment="Center">
                     <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Student ID" FontSize="16" Width="180"/>
                 </Label>
 
                 <!--Student ID-->
-                <TextBox Grid.Column="0" Grid.Row="5" Margin="10,5,0,5" x:Name="studentidBox" BorderBrush="#FFAA1D2C"/>
+                <TextBox Grid.Column="2" Grid.Row="1" Margin="10,5,0,25" x:Name="studentidBox" BorderBrush="#FFAA1D2C"/>
 
                 <!--Submit Button-->
-                <Button Grid.Column="2" Grid.Row="5" Width="110" Height="auto" HorizontalAlignment="Right"  Background="#FFAA1D2C" Foreground="White" Content="Add Resident" Click="add_resident_btn" BorderBrush="{x:Null}" Margin="0,0,0,0"/>
+                <Button x:Name="add_resident_button" Grid.Column="2" Grid.Row="5" Width="110" Height="auto" HorizontalAlignment="Right"  Background="#FFAA1D2C" Foreground="White" Content="Add Resident" Click="add_resident_btn" BorderBrush="{x:Null}" Margin="0,25,0,0"/>
 
             </Grid>
 

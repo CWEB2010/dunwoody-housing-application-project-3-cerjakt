@@ -11,7 +11,7 @@ namespace Project_Three_GUI.Models
 		public double pay = 14;
 		public int hours_worked { get; set; }
 
-		public Student_Worker(string name, string type, int id, int room_number, double rent_fee, int floor, double boarding_fee, double pay, int hours_worked)
+		public Student_Worker(string name, string type, int id, int room_number, double rent_fee, int floor)
 		{
 			this.name = name;
 			this.type = type;
@@ -19,15 +19,12 @@ namespace Project_Three_GUI.Models
 			this.room_number = room_number;
 			this.rent_fee = rent_fee;
 			this.floor = floor;
-			this.boarding_fee = boarding_fee;
-			this.pay = pay;
-			this.hours_worked = hours_worked;
 		}
 
 		//Define a toString method 
 		public override string ToString()
 		{
-			return String.Format($"Welcome, {name}, ID: {id}, Room Number: {room_number}, Rent Free: {rent_fee}, Floor Number: {floor}, Boarding Fee: {boarding_fee}, Boarding Fee: {boarding_fee}, Boarding Fee: {pay}, Boarding Fee: {hours_worked}");
+			return String.Format($"Welcome, {name}, Type: {type}, ID: {id}, Room Number: {room_number}, Rent Free: {rent_fee}, Floor Number: {floor}");
 		}
 
 	}

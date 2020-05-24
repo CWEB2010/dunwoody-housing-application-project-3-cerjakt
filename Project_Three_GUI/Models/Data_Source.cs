@@ -20,7 +20,7 @@ namespace Project_Three_GUI.Models
 		List<Resident> residentList; //Global
 
 
-		/**Mehod that reads the data into my program **/
+		//Method that reads the data into my program
 		public ObservableCollection<Resident> readData()
 		{
 			string[] data;

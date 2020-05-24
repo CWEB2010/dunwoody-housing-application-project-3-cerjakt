@@ -23,6 +23,5 @@ namespace Project_Three_GUI.Models
 		{
 			return String.Format($"Welcome, {name}, Type: {type}, ID: {id}, Room Number: {room_number}, Rent Free: {rent_fee}, Floor Number: {floor}");
 		}
-
 	}
 }

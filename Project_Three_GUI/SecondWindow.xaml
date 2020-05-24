@@ -15,7 +15,7 @@
 
         <!--Exit Button-->
         <Button Width="auto" Height="auto" HorizontalAlignment="Right"  Background="White" Foreground="Black" Content="X" FontSize="32" Click="exit_btn" BorderBrush="{x:Null}"/>
-        
+
         <!--Sizing the tabs section-->
         <TabControl Height="1000" TabStripPlacement="Top" SelectionChanged="TabControl_SelectionChanged">
 
@@ -27,29 +27,92 @@
                     <!--Defining rows and columns for the grid-->
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto" MinWidth="505"/>
+                        <ColumnDefinition Width="auto" MinWidth="175"/>
                         <ColumnDefinition Width="auto"/>
                     </Grid.ColumnDefinitions>
 
-                    <!--Making a data grid-->
-                    <DataGrid Grid.Column="1" Grid.Row="2" Margin="150,100,150,-350" BorderBrush="White">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Amount per Floor"/>
-                            <DataGridTextColumn Header="Student Workers"/>
-                            <DataGridTextColumn Header="Athletes"/>
-                            <DataGridTextColumn Header="Scholarship Recipients"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
+                    <!--Queries-->
+
+                    <!--Floor Information-->
+
+                    <!--Student Worker Text-->
+                    <Label Grid.Row="0" Grid.Column="1" HorizontalContentAlignment="Center" Margin="0,32,0,0">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Student Worker" FontSize="16" Width="165"/>
+                    </Label>
+                    <!--Student Worker-->
+                    <TextBox Grid.Row="1" Grid.Column="1" Margin="10,5,135,25" x:Name="studentworkerBox" BorderBrush="#FFAA1D2C"/>
+
+
+                    <!--Athlete Text-->
+                    <Label Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Athlete" FontSize="16" Width="165"/>
+                    </Label>
+                    <!--Athlete-->
+                    <TextBox Grid.Row="3" Grid.Column="1" Margin="10,5,135,25" x:Name="athleteBox" BorderBrush="#FFAA1D2C"/>
+
+
+                    <!--Scholarship Recipient Text-->
+                    <Label Grid.Row="4" Grid.Column="1" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Scholarship Recipient" FontSize="16" Width="165"/>
+                    </Label>
+                    <!--Scholarship Recipient-->
+                    <TextBox Grid.Row="5" Grid.Column="1" Margin="10,5,135,25" x:Name="scholarshiprecipientBox" BorderBrush="#FFAA1D2C"/>
+
+
+                    <!--Floor Information-->
+
+                    <!--Floors 1-3 Text-->
+                    <Label Grid.Row="6" Grid.Column="1" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Floors 1-3" FontSize="16" Width="165"/>
+                    </Label>
+
+                    <!--Floors 1-3-->
+                    <TextBox Grid.Row="7" Grid.Column="1" Margin="10,5,135,25" x:Name="floor1to3Box" BorderBrush="#FFAA1D2C"/>
+
+                    <!--Floors 4-6 Text-->
+                    <Label Grid.Row="8" Grid.Column="1" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Floors 4-6" FontSize="16" Width="165"/>
+                    </Label>
+
+                    <!--Floors 4-6-->
+                    <TextBox Grid.Row="9" Grid.Column="1" Margin="10,5,135,25" x:Name="floor4to6Box" BorderBrush="#FFAA1D2C"/>
+
+                    <!--Floors 7-8 Text-->
+                    <Label Grid.Row="10" Grid.Column="1" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Floors 7-8" FontSize="16" Width="165"/>
+                    </Label>
+
+                    <!--Floors 7-8-->
+                    <TextBox Grid.Row="11" Grid.Column="1" Margin="10,5,135,25" x:Name="floor7to8Box" BorderBrush="#FFAA1D2C"/>
+
+
+                    <!--Search Bar Text-->
+                    <Label Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Left" Margin="-35,32,0,0">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Search by ID" FontSize="16" Width="200"/>
+                    </Label>
+
+                    <!--Search Bar-->
+                    <TextBox x:Name="search_bar" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" Height="23" Margin="-35,5,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="235" Foreground="Black" BorderBrush="#FFAA1D2C" TextChanged="search_bar_textchanged"/>
+
+                    <!--Refresh Button-->
+                    <Button x:Name="refresh_button" Grid.Row="1" Grid.Column="0"  Width="100" Height="auto" HorizontalAlignment="Right"  Background="#FFAA1D2C" Foreground="White" Content="Refresh" Click="refresh_btn" BorderBrush="#FFAA1D2C" Margin="0,5,40,25"/>
 
                     <!--Residents Data Grid-->
-                    <TextBox Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Height="25" Margin="150,25,0,-46" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="150" Foreground="#FFD1D1D1" BorderBrush="#FFAA1D2C"/>
-
-                    <DataGrid x:Name="resident_entry_grid" SelectionMode="Single" AutoGenerateColumns="False" Grid.Column="0" Grid.Row="2" Margin="150,100,150,-350" BorderBrush="White">
+                    <DataGrid x:Name="resident_entry_grid" SelectionMode="Single" HorizontalAlignment="Left" AutoGenerateColumns="False" Grid.Column="0" Grid.Row="2" Margin="-35,0,0,27" BorderBrush="#FFAA1D2C" Grid.RowSpan="8" Width="500" Background="White" Foreground="Black">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Name" Binding="{Binding name}"/>
                             <DataGridTextColumn Header="Type" Binding="{Binding type}"/>
@@ -66,63 +129,63 @@
 
             <TabItem Header="New Resident" BorderBrush="#FFACACAC" Background="White" Margin="120,0,-240,0">
 
-            <Grid HorizontalAlignment="Center">
+                <Grid HorizontalAlignment="Center">
 
-                <!--Defining rows and columns for the grid-->
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto" MinWidth="97"/>
-                    <ColumnDefinition Width="auto" MinWidth="100"/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
+                    <!--Defining rows and columns for the grid-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" MinWidth="97"/>
+                        <ColumnDefinition Width="auto" MinWidth="100"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
 
-                <!--Student Type Text-->
-                <Label Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Center">
-                    <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Student Type" FontSize="16" Width="165"/>
-                </Label>
+                    <!--Student Type Text-->
+                    <Label Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Student Type" FontSize="16" Width="165"/>
+                    </Label>
 
-                <!--First Name Text-->
-                <Label Grid.Row="0" Grid.Column="1" HorizontalContentAlignment="Center">
-                    <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Full Name" FontSize="16" Width="165"/>
-                </Label>
+                    <!--First Name Text-->
+                    <Label Grid.Row="0" Grid.Column="1" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Full Name" FontSize="16" Width="165"/>
+                    </Label>
 
-                <!--Student Type Combo Box-->
-                <ComboBox x:Name="student_type_combo_box" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0" SelectionChanged="student_type_changed">
-                    <ComboBoxItem Content="Student Worker"></ComboBoxItem>
-                    <ComboBoxItem Content="Athlete"></ComboBoxItem>
-                    <ComboBoxItem Content="Scholarship Recipient"></ComboBoxItem>
-                </ComboBox>
+                    <!--Student Type Combo Box-->
+                    <ComboBox x:Name="student_type_combo_box" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0" SelectionChanged="student_type_changed">
+                        <ComboBoxItem Content="Student Worker"></ComboBoxItem>
+                        <ComboBoxItem Content="Athlete"></ComboBoxItem>
+                        <ComboBoxItem Content="Scholarship Recipient"></ComboBoxItem>
+                    </ComboBox>
 
-                <!--First Name Text Box-->
-                <TextBox Grid.Column="1" Grid.Row="1" Margin="10,5,10,25" x:Name="fullnameBox" BorderBrush="#FFAA1D2C"/>
+                    <!--First Name Text Box-->
+                    <TextBox Grid.Column="1" Grid.Row="1" Margin="10,5,10,25" x:Name="fullnameBox" BorderBrush="#FFAA1D2C"/>
 
-                <!--Floor Number Text-->
-                <Label Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Center">
-                    <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Floor Number" FontSize="16" Width="180"/>
-                </Label>
+                    <!--Floor Number Text-->
+                    <Label Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Floor Number" FontSize="16" Width="180"/>
+                    </Label>
 
-                <!--Room Number Text-->
-                <Label Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Center">
-                    <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Room Number" FontSize="16" Width="180"/>
-                </Label>
+                    <!--Room Number Text-->
+                    <Label Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Room Number" FontSize="16" Width="180"/>
+                    </Label>
 
-                <!--Monthly Hours Text-->
-                <Label Grid.Row="2" Grid.Column="2" HorizontalContentAlignment="Center">
-                    <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Monthly Hours" FontSize="16" Width="164"/>
-                </Label>
+                    <!--Monthly Hours Text-->
+                    <Label Grid.Row="2" Grid.Column="2" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Monthly Hours" FontSize="16" Width="164"/>
+                    </Label>
 
-                <!--Floor Number Combo Box-->
-                <ComboBox x:Name="floor_number_combo_box" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0"/>
+                    <!--Floor Number Combo Box-->
+                    <ComboBox x:Name="floor_number_combo_box" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0"/>
 
-                <!--Room Number Combo Box-->
-                <ComboBox x:Name="room_number_combo_box" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0">
+                    <!--Room Number Combo Box-->
+                    <ComboBox x:Name="room_number_combo_box" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="23" Margin="10,5,0,0">
                         <ComboBoxItem Content="1"></ComboBoxItem>
                         <ComboBoxItem Content="2"></ComboBoxItem>
                         <ComboBoxItem Content="3"></ComboBoxItem>
@@ -140,21 +203,21 @@
                         <ComboBoxItem Content="15"></ComboBoxItem>
                     </ComboBox>
 
-                <!--Monthly Hours Text Box-->
-                <TextBox Grid.Column="3" Grid.Row="3" Margin="10,5,0,5" x:Name="monthlyhoursBox" BorderBrush="#FFAA1D2C"/>
+                    <!--Monthly Hours Text Box-->
+                    <TextBox Grid.Column="3" Grid.Row="3" Margin="10,5,0,5" x:Name="monthlyhoursBox" BorderBrush="#FFAA1D2C"/>
 
-                <!--Student ID Text-->
-                <Label Grid.Row="0" Grid.Column="2" HorizontalContentAlignment="Center">
-                    <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Student ID" FontSize="16" Width="180"/>
-                </Label>
+                    <!--Student ID Text-->
+                    <Label Grid.Row="0" Grid.Column="2" HorizontalContentAlignment="Center">
+                        <AccessText TextWrapping="NoWrap" TextAlignment="Left" Text="Student ID" FontSize="16" Width="180"/>
+                    </Label>
 
-                <!--Student ID-->
-                <TextBox Grid.Column="2" Grid.Row="1" Margin="10,5,0,25" x:Name="studentidBox" BorderBrush="#FFAA1D2C"/>
+                    <!--Student ID-->
+                    <TextBox Grid.Column="2" Grid.Row="1" Margin="10,5,0,25" x:Name="studentidBox" BorderBrush="#FFAA1D2C"/>
 
-                <!--Submit Button-->
-                <Button x:Name="add_resident_button" Grid.Column="2" Grid.Row="5" Width="110" Height="auto" HorizontalAlignment="Right"  Background="#FFAA1D2C" Foreground="White" Content="Add Resident" Click="add_resident_btn" BorderBrush="{x:Null}" Margin="0,25,0,0"/>
+                    <!--Submit Button-->
+                    <Button x:Name="add_resident_button" Grid.Column="2" Grid.Row="5" Width="110" Height="auto" HorizontalAlignment="Right"  Background="#FFAA1D2C" Foreground="White" Content="Add Resident" Click="add_resident_btn" BorderBrush="#FFAA1D2C" Margin="0,25,0,0"/>
 
-            </Grid>
+                </Grid>
 
             </TabItem>
 

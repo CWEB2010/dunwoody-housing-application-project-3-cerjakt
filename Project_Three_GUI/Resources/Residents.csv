@@ -1,4 +1,4 @@
-name,id,room_number,rent_fee,floor
+name,type,id,room_number,rent_fee,floor
 Jake Cermak,Student Worker,1001,7,685,2
 Jim Carrey,Scholarship Recipient,1002,13,100,7
 Adam Sandler,Athlete,1003,6,1200,6
